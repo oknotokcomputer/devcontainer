@@ -1,6 +1,6 @@
 {
     "id": "base",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "name": "Base",
     "description": "Base image for all other images.",
     "documentationURL": "https://github.com/oknotokcomputer/devcontainer/",
@@ -8,7 +8,7 @@
     "options": {
         "imageVariant": {
             "type": "string",
-            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
+            "description": "Debian version",
             "proposals": [
                 "bullseye",
                 "buster",

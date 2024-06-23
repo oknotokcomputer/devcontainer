@@ -3,7 +3,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VARIANT": "${templateOption:imageVariant}",
+            "VARIANT": "${templateOption:imageVariant}"
         }
     },
     "runArgs": [
@@ -23,7 +23,9 @@
           "esbenp.prettier-vscode",
           "ms-python.vscode-pylance",
           "foxundermoon.shell-format",
-          "timonwong.shellcheck"
+          "timonwong.shellcheck",
+          "GitHub.copilot",
+          "SeaQL.firedbg-rust"
         ]
       }
     }
