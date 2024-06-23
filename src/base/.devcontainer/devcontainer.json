@@ -11,8 +11,21 @@
         "--group-add=kvm",
         "--pids-limit=4096"
     ],
-    "remoteUser": "root",
+    // "remoteUser": "root",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "updateRemoteUserUID": true   
-}
+    "updateRemoteUserUID": true,   
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "rust-lang.rust-analyzer",
+          "tamasfe.even-better-toml",
+          "esbenp.prettier-vscode",
+          "ms-python.vscode-pylance",
+          "foxundermoon.shell-format",
+          "timonwong.shellcheck"
+        ]
+      }
+    }
+  }
+  
