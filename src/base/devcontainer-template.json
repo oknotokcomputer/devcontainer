@@ -1,0 +1,23 @@
+{
+    "id": "base",
+    "version": "1.0.0",
+    "name": "Base",
+    "description": "Base image for all other images.",
+    "documentationURL": "https://github.com/oknotokcomputer/devcontainer/",
+    "licenseURL": "https://github.com/oknotokcomputer/devcontainer/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "bullseye",
+                "buster",
+                "bookworm-20240612"
+            ],
+            "default": "bookworm-20240612"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
