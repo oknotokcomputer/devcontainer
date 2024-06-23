@@ -7,7 +7,7 @@ Base image for all other images.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| imageVariant | Debian version (use bullseye on local arm64/Apple Silicon): | string | bookworm-20240612 |
+| imageVariant | Debian version | string | bookworm-20240612 |
 
 
 
