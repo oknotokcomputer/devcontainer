@@ -1,16 +1,26 @@
-// More info: https://containers.dev/implementors/json_reference/
 {
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"mads-hartmann.bash-ide-vscode",
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
-	"postCreateCommand": "npm install -g @devcontainers/cli"
-}
+    "name": "ok.dev",
+    "build": {
+        "dockerfile": "../src/base/.devcontainer/Dockerfile",
+        "context": "..",
+        "args": {
+            "VARIANT": "bookworm-20240612",
+        }
+    },
+    "runArgs": [
+        "--device=/dev/kvm",
+        "--group-add=kvm",
+        "--pids-limit=4096"
+    ],
+    // "remoteUser": "root",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "updateRemoteUserUID": true,   
+    "customizations": {
+      "vscode": {
+        "extensions": [
+        ]
+      }
+    }
+  }
+  
