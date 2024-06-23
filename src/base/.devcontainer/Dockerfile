@@ -46,6 +46,7 @@ RUN apt-get update && apt-get install -y \
     meson \
     mypy \
     nasm \
+    npm \
     ncat \
     ninja-build \
     openssh-client \
@@ -70,6 +71,9 @@ RUN apt-get update && apt-get install -y \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 ENV CARGO_HOME=/root/.cargo
+
+# install wasm32-unknown-unknown
+RUN rustup target add wasm32-unknown-unknown
 
 RUN curl https://raw.githubusercontent.com/SeaQL/FireDBG.for.Rust/main/install.sh -sSf | sh
 
