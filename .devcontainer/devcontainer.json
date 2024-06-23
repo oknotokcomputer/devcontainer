@@ -4,7 +4,7 @@
         "dockerfile": "../src/base/.devcontainer/Dockerfile",
         "context": "..",
         "args": {
-            "VARIANT": "bookworm-20240612",
+            "VARIANT": "bookworm-20240612"
         }
     },
     "runArgs": [
